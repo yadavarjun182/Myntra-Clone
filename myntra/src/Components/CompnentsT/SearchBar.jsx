@@ -24,6 +24,7 @@ const SearchBar = ({ queryHandler }) => {
       <SearchBarWrapper>
         <Input value={input} onChange={(e) => setInput(e.target.value)} />
         <Button onClick={handlesearch}>search</Button>
+        {/* searchbar shows data by brand name whatever query you pass in the serachbar */}
       </SearchBarWrapper>
     </Wrapper>
   );
@@ -31,12 +32,14 @@ const SearchBar = ({ queryHandler }) => {
 
 export default SearchBar;
 
+// styled components library is used here to provide styling to searchbar component
 const SearchBarWrapper = styled.div`
   border: 1px solid gray;
   border-radius: 10px;
   display: flex;
 `;
 
+// styled component build to give styling to input tag
 const Input = styled.input`
   flex: 1;
   font-size: 16px;
@@ -44,6 +47,7 @@ const Input = styled.input`
   outline: none;
 `;
 
+// styled component build to give styling to main div tag
 const Wrapper = styled.div`
   max-width: 350px;
   margin: auto;

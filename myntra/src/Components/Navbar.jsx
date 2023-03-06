@@ -10,9 +10,9 @@ import {
   ModalBody,
   ModalFooter,
   Flex,
-  } from "@chakra-ui/react";
+} from "@chakra-ui/react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import React, {  useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 
 import { Stack, InputLeftElement, InputGroup } from "@chakra-ui/react";
@@ -27,9 +27,9 @@ const Navbar = () => {
 
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState([]);
-  console.log(query);
+  // console.log(query);
   const products = useSelector((store) => store.productDatareducer.products);
-  console.log("products", products);
+  // console.log("products", products);
 
   const handleSizeClick = (newSize) => {
     setSize(newSize);
@@ -109,21 +109,30 @@ const Navbar = () => {
         justifyContent={"space-around"}
         width={"80%"}
       >
+        {/* button linked to show all men data */}
         <button onClick={getmensdata}>
           <Link to="/mens">  <h1>Mens</h1></Link>
         </button>
+        {/* button linked to show all women data */}
         <button onClick={getwomensdata}>
           <Link to="/women"> <h1>Womens</h1></Link>
         </button>
+        {/* kids data has not bee added will be added in future */}
         <button onClick={getkidsdata}>
           <h1>Kids</h1>
         </button>
+
+        {/* Home & Living data has not bee added will be added in future */}
         <button>
           <h1>Home & Living</h1>
         </button>
+
+        {/* Beauty data has not bee added will be added in future */}
         <button>
           <h1>Beauty</h1>
         </button>
+
+        {/* Studio data has not bee added will be added in future */}
         <button>
           <h1>Studio</h1>
         </button>

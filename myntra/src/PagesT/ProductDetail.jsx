@@ -8,20 +8,11 @@ const ProductDetail = ({ pro }) => {
 
 
     const [clicked, setClicked] = useState(false);
-
-    console.log(pro)
-
-
-    console.log(pro)
-
-
-
-    useEffect(() => {
+      useEffect(() => {
         console.log(clicked)
     }, [clicked])
 
     const userData = useSelector(store => store.usergetdatareducer.userdata)
-
     console.log(userData);
 
     const cartData = JSON.parse(localStorage.getItem("cartData")) || []

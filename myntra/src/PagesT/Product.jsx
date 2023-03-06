@@ -10,8 +10,6 @@ const Product = () => {
     <div>
       <Navbar />
       <Filters />
-      
-        {/* <ProductList /> */}
         <ProductDetail />
     </div>
   )

@@ -6,6 +6,7 @@ import ProductDetail from '../../PagesT/ProductDetail';
 
 const SinglePro = () => {
     const {id} = useParams();
+    // getting state (products) from the redus store
     const products = useSelector((store) => store.productDatareducer.products);
     const [data,setData] = useState({});
 
