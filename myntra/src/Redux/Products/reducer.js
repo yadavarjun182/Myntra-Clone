@@ -1,9 +1,8 @@
 import { GET_PRODUCT_FAILURE, GET_PRODUCT_REQUEST, GET_PRODUCT_SUCCESS } from "./actionType";
 
-
-
 const initialState = {
     products: [],
+    // filteredProducts:[],
     isLoading: false,
     isError: false
 

@@ -1,56 +1,28 @@
-import { Toast, useToast } from '@chakra-ui/react';
-import axios from 'axios'
+import { useToast } from '@chakra-ui/react';
 import React, { useEffect } from 'react'
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Navbar2 from '../Components/Navbar2';
-import usergetdataaction from '../Redux/Auth/UserSignup/usergetdataaction';
-import cartaction from '../Redux/Cartrr/cartaction';
 import styles from './ProductDetail.module.css'
 const ProductDetail = ({ pro }) => {
 
 
-    const [clicked,setClicked] = useState(false);
+    const [clicked, setClicked] = useState(false);
 
-console.log(pro)
-
-  
     console.log(pro)
 
 
-    const dispatch = useDispatch()
+    console.log(pro)
+
+
 
     useEffect(() => {
-        // axios.get("https://cheerful-trunks-duck.cyclic.app/cart")
-        // .then((res) => {
-        //     setCount(res.data.length)
-        //     //  
-        // })
-        // .catch((err) => {
-        //     console.log(err)
-        // })
-
         console.log(clicked)
-
-        // dispatch(usergetdataaction());
-       
-        
-    },[clicked])
-
-
-
-      
-
-
- 
+    }, [clicked])
 
     const userData = useSelector(store => store.usergetdatareducer.userdata)
 
     console.log(userData);
-
-
-    const userId = JSON.parse(localStorage.getItem("userId")) || "";
-
 
     const cartData = JSON.parse(localStorage.getItem("cartData")) || []
     const toast = useToast()
@@ -78,15 +50,15 @@ console.log(pro)
         // })
 
 
-            // const newUserData = userData.filter(el => el.id == userId)
-            // console.log(newUserData[0].cart.push(newUserData));
+        // const newUserData = userData.filter(el => el.id == userId)
+        // console.log(newUserData[0].cart.push(newUserData));
 
-            
-            setClicked(true)
-            // dispatch(cartaction(userId,pro))
+
+        setClicked(true)
+        // dispatch(cartaction(userId,pro))
     }
 
-    
+
 
 
     return (
@@ -123,8 +95,8 @@ console.log(pro)
                         <button>44</button>
                     </div>
                     <div className={styles.cartAdd}>
-                        <button onClick={handleCart} disabled ={clicked}>ADD TO BAG</button>
-                        <button className={styles.wish}>Wishlist</button>
+                        <button onClick={handleCart} disabled={clicked}>ADD TO BAG</button>
+                        {/* <button className={styles.wish}>Wishlist</button> */}
                     </div>
                     <div>
                         <p className={styles.discription}>
