@@ -2,7 +2,7 @@ import { Box, Flex, Heading, Spacer, Button, ButtonGroup, Image } from '@chakra-
 import React from 'react'
 import { Link } from 'react-router-dom';
 import logoicon from "../pictures/logoicon.png";
-
+import "./navbar.css"
 
 import Navbar from './Navbar';
 
@@ -16,7 +16,7 @@ const Navbar2 = ({ text }) => {
   return (
     <>
 
-      <Flex minWidth='max-content' alignItems='center' gap='1'>
+      <Flex minWidth='max-content' alignItems='center' gap='1' className="navcontainer">
 
         <Box>
           <Link to="/">
@@ -45,6 +45,16 @@ const Navbar2 = ({ text }) => {
         </ButtonGroup>
       </Flex>
 
+    {/* <flex>
+    <Box>
+          <Link to="/">
+
+            <Image h={'50px'} w={'50px'} src={logoicon} alt={'logo'} />
+
+
+          </Link>
+    </Box>
+    </flex>       */}
 
     </>
   )
