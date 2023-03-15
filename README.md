@@ -5,7 +5,7 @@
 
 Fashion Mantra is a clone of Myntra.com which is an E-Commerce Website for premium clothes and accessories.
 
- - Deployed Netlify link:- https://fashionmantra.vercel.app/
+ - Deployed  link:- [https://myntra-clone2-eta.vercel.app]
 
 
 ## Website User flow :- 
